@@ -758,7 +758,7 @@ MonoBehaviour:
   indicadorEtelevisor: {fileID: 1611066808}
   indicadorEfuego: {fileID: 1171693851}
   indicadorEcajas: {fileID: 1956393318}
-  distanciaInteraccion: 2
+  distanciaInteraccion: 4
   escenaCama: Bio
   escenaTelevisor: Anim
   escenaFuego: Ilustraciones
@@ -811,7 +811,7 @@ Transform:
   m_GameObject: {fileID: 314886328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -208.5, y: -173.1, z: 0}
+  m_LocalPosition: {x: -208.5, y: -170, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377425675}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 040cfe751a7db6e4194de354f7ba8c23, type: 3}
   m_Name: 
@@ -1111,7 +1111,7 @@ Transform:
   m_GameObject: {fileID: 462017979}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -232.24716, y: -171.9926, z: 0}
+  m_LocalPosition: {x: -232.24716, y: -170, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1512,7 +1512,7 @@ RectTransform:
   - {fileID: 1611066809}
   - {fileID: 1956393319}
   - {fileID: 1171693852}
-  m_Father: {fileID: 1858618615}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2409,7 +2409,7 @@ Transform:
   m_GameObject: {fileID: 1578883169}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -153.2, y: -172.9, z: 0}
+  m_LocalPosition: {x: -153.2, y: -170, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2683,7 +2683,7 @@ GameObject:
   - component: {fileID: 1858618613}
   - component: {fileID: 1858618612}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2779,8 +2779,7 @@ Transform:
   m_LocalPosition: {x: 24.7, y: 0, z: 17.8}
   m_LocalScale: {x: 17.01118, y: 11.77, z: 6.438847}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 892428342}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1882822012
@@ -3041,7 +3040,7 @@ Transform:
   m_GameObject: {fileID: 2079674469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -182.7, y: -172.9, z: 0}
+  m_LocalPosition: {x: -182.7, y: -170, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3147,6 +3146,7 @@ SceneRoots:
   - {fileID: 437535281}
   - {fileID: 963478309}
   - {fileID: 377425680}
+  - {fileID: 892428342}
   - {fileID: 1858618615}
   - {fileID: 1882822015}
   - {fileID: 314227550}

@@ -33,8 +33,18 @@ public class CambioDeEscena : MonoBehaviour
     private Transform fuego;
     private Transform cajas;
 
+    private static CambioDeEscena instancia;
+
     private void Awake()
     {
+        if (instancia != null && instancia != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instancia = this;
+        DontDestroyOnLoad(gameObject);
         // Si este objeto se está marcando como DontDestroyOnLoad en otro momento,
         // mantenerlo está bien; de todos modos re-asignaremos las referencias al cargar escena.
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -60,8 +70,8 @@ public class CambioDeEscena : MonoBehaviour
         // Si no hay jugador, intentar buscar por tag Player
         if (jugador == null)
         {
-            var goPlayer = GameObject.FindGameObjectWithTag("Player");
-            if (goPlayer != null) jugador = goPlayer.transform;
+            jugador = GameObject.FindGameObjectWithTag("Player")?.transform;
+            return;
         }
 
         // Si las referencias de interactuables son null, buscarlas por nombre en la escena
