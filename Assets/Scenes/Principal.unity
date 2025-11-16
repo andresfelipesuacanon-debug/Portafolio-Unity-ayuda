@@ -724,7 +724,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 437535281}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &314227548
+--- !u!1 &325395270
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -732,90 +732,62 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 314227550}
-  - component: {fileID: 314227549}
+  - component: {fileID: 325395272}
+  - component: {fileID: 325395271}
   m_Layer: 0
-  m_Name: AdministradorE
+  m_Name: PanelZonesManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &314227549
+--- !u!114 &325395271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314227548}
+  m_GameObject: {fileID: 325395270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4365882af3f36245a9d6f9c3e7c235a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c828df811879924fbd7bf6ab1784e03, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CambioDeEscena
-  jugador: {fileID: 377425680}
-  indicadorEcama: {fileID: 1276419680}
-  indicadorEtelevisor: {fileID: 1611066808}
-  indicadorEfuego: {fileID: 1171693851}
-  indicadorEcajas: {fileID: 1956393318}
-  distanciaInteraccion: 2
-  escenaCama: Bio
-  escenaTelevisor: Anim
-  escenaFuego: Ilustraciones
-  escenaCajas: Fichas
-  nombreCama: Cama
-  nombreTelevisor: Televisor
-  nombreFuego: Fuego
-  nombreCajas: Cajas
---- !u!4 &314227550
+  m_EditorClassIdentifier: Assembly-CSharp::PanelZoneManager
+  zonas:
+  - panelName: IndCama
+    positionX: -11
+    tolerancia: 2
+    sceneToLoad: Bio
+    panelRef: {fileID: 0}
+  - panelName: IndTelevisor
+    positionX: 13
+    tolerancia: 2
+    sceneToLoad: Anim
+    panelRef: {fileID: 0}
+  - panelName: IndFuego
+    positionX: 39
+    tolerancia: 2
+    sceneToLoad: Ilustraciones
+    panelRef: {fileID: 0}
+  - panelName: IndCajas
+    positionX: 65
+    tolerancia: 2
+    sceneToLoad: Fichas
+    panelRef: {fileID: 0}
+--- !u!4 &325395272
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314227548}
+  m_GameObject: {fileID: 325395270}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 220.16716, y: 176.8926, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 462017981}
-  - {fileID: 314886329}
-  - {fileID: 2079674470}
-  - {fileID: 1578883170}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &314886328
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 314886329}
-  m_Layer: 0
-  m_Name: Televisor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &314886329
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314886328}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -208.5, y: -173.1, z: 0}
+  m_LocalPosition: {x: 0, y: 4.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 314227550}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &377425675
 GameObject:
@@ -830,10 +802,9 @@ GameObject:
   - component: {fileID: 377425678}
   - component: {fileID: 377425677}
   - component: {fileID: 377425676}
-  - component: {fileID: 377425681}
   m_Layer: 0
   m_Name: jugador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -941,24 +912,12 @@ Transform:
   m_GameObject: {fileID: 377425675}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.9, y: 5.2, z: 0}
+  m_LocalPosition: {x: 96, y: 5.2, z: 0}
   m_LocalScale: {x: 3.5625, y: 3.5625, z: 3.5625}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &377425681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377425675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040cfe751a7db6e4194de354f7ba8c23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JugadorPersistente
 --- !u!1 &415981073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,37 +1044,6 @@ Transform:
   - {fileID: 1801577204}
   - {fileID: 305946026}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &462017979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 462017981}
-  m_Layer: 0
-  m_Name: Cama
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &462017981
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462017979}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -232.24716, y: -171.9926, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 314227550}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &530273471
 GameObject:
@@ -1512,7 +1440,7 @@ RectTransform:
   - {fileID: 1611066809}
   - {fileID: 1956393319}
   - {fileID: 1171693852}
-  m_Father: {fileID: 1858618615}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1939,12 +1867,12 @@ GameObject:
   - component: {fileID: 1171693854}
   - component: {fileID: 1171693853}
   m_Layer: 5
-  m_Name: IndicadorEFuego
-  m_TagString: Untagged
+  m_Name: IndicadorFuego
+  m_TagString: IndFuego
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1171693852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2231,12 +2159,12 @@ GameObject:
   - component: {fileID: 1276419683}
   - component: {fileID: 1276419682}
   m_Layer: 5
-  m_Name: IndicadorECama
-  m_TagString: Untagged
+  m_Name: IndicadorCama
+  m_TagString: IndCama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1276419681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2384,37 +2312,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1229357611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1578883169
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1578883170}
-  m_Layer: 0
-  m_Name: Cajas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1578883170
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578883169}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -153.2, y: -172.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 314227550}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611066808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,12 +2324,12 @@ GameObject:
   - component: {fileID: 1611066811}
   - component: {fileID: 1611066810}
   m_Layer: 5
-  m_Name: IndicadorETelevisor
-  m_TagString: Untagged
+  m_Name: IndicadorTelevisor
+  m_TagString: IndTelevisor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1611066809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2683,7 +2580,7 @@ GameObject:
   - component: {fileID: 1858618613}
   - component: {fileID: 1858618612}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2779,8 +2676,7 @@ Transform:
   m_LocalPosition: {x: 24.7, y: 0, z: 17.8}
   m_LocalScale: {x: 17.01118, y: 11.77, z: 6.438847}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 892428342}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1882822012
@@ -2953,12 +2849,12 @@ GameObject:
   - component: {fileID: 1956393321}
   - component: {fileID: 1956393320}
   m_Layer: 5
-  m_Name: IndicadorECajas
-  m_TagString: Untagged
+  m_Name: IndicadorCajas
+  m_TagString: IndCajas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1956393319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3016,37 +2912,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956393318}
   m_CullTransparentMesh: 1
---- !u!1 &2079674469
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2079674470}
-  m_Layer: 0
-  m_Name: Fuego
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2079674470
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079674469}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -182.7, y: -172.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 314227550}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086225178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,5 +3013,6 @@ SceneRoots:
   - {fileID: 963478309}
   - {fileID: 377425680}
   - {fileID: 1858618615}
+  - {fileID: 325395272}
+  - {fileID: 892428342}
   - {fileID: 1882822015}
-  - {fileID: 314227550}
